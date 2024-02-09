@@ -46,6 +46,14 @@ Running with Docker
     
     Accessing the Application: Once the containers are up, access the application via http://localhost:3000 for the frontend and http://localhost:80xx for the backend services from postman or other application made for testing endpoints.
 
+Diagrams:
+Deployment:
+![diagarma deployment](https://github.com/AlexX15-T/energy-management/assets/79551420/f663f714-729e-4463-ba8e-90fa093d9b0b)
+
+Architecture:
+![diagrama arhitectura](https://github.com/AlexX15-T/energy-management/assets/79551420/3b98d4fd-4e66-4b2d-8a25-f6372f57169b)
+
+
 Demo
 
 Watch a comprehensive video demonstration of the Energy Management System Chat and Authorization Services in action here. This video covers the project's main features, showcasing real-time user interaction, notification handling, and secure access mechanisms.
