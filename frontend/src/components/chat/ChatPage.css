@@ -1,0 +1,79 @@
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.user-list {
+    width: 300px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.chat-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+/* .message {
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+} */
+
+.message-input {
+    display: flex;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+}
+
+.message-input .MuiTextField-root {
+    margin-right: 8px;
+    flex-grow: 1;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns children to the start, allows individual items to move to the end */
+    width: 100%; /* Adjust based on your layout */
+    /* Add any additional styles such as padding or max-height */
+}
+
+.message {
+    padding: 10px 20px;
+    margin: 4px 0;
+    border-radius: 16px;
+    color: white;
+    max-width: 80%; /* Adjust the maximum width of message bubbles */
+    word-wrap: break-word; /* Ensures text breaks to the next line */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Example shadow */
+}
+
+.message-left {
+    background-color: #007bff; /* Color for one user */
+    align-self: flex-start; /* Aligns this message to the left */
+    margin-right: auto; /* Pushes the bubble to the left */
+}
+
+.message-right {
+    background-color: #333; /* Color for the other user */
+    align-self: flex-end; /* Aligns this message to the right */
+    margin-left: auto; /* Pushes the bubble to the right */
+}
+
+
