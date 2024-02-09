@@ -52,6 +52,8 @@ Watch a comprehensive video demonstration of the Energy Management System Chat a
 
 
 
-https://github.com/AlexX15-T/energy-management/assets/79551420/5120b553-8547-4536-a04c-9ad9eec32b2a
+https://github.com/AlexX15-T/energy-management/assets/79551420/3de17bcc-591f-428e-9517-f15cc4392012
+
+
 
 
