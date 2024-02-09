@@ -4,18 +4,44 @@ Project Name: Energy Management System Chat and Authorization Services
 About
 
 This project integrates chat and authorization microservices for an Energy Management System, focusing on secure, real-time communication and efficient notification handling. Built with Java Spring Boot and secured with JWTs, it features a React frontend, Docker for deployment, MySQL for data persistence, RabbitMQ for notifications, and WebSockets for real-time communication.
+
+Pre-requirements
+
+    Ensure you have Java, Node.js, and MySQL installed on your local machine.
+    Java JDK 11 or later: For running Spring Boot applications.
+    Node.js and npm: For managing the React frontend.
+    Docker and Docker Compose: For containerization and orchestration, also RabbitMQ will run only on Docker.
+    MySQL: For database services.
+
 Functionality
 Locally Running the Application
 
-    Prerequisites: Ensure you have Java, Node.js, and MySQL installed on your local machine.
-    Backend Setup: Navigate to the backend folder, and run mvn spring-boot:run to start the Spring Boot application.
+    Backend Setup: Navigate to the backend folder, and run mvn spring-boot:run to start the Spring Boot application. 
+    Do not forget to take care when choosing ports for each microservice in the backend.
+    
     Frontend Setup: In the frontend directory, execute npm install followed by npm start to launch the React application.
-    Database Configuration: Create a MySQL database named ems_db and run the provided SQL scripts to set up your tables.
+    
+    Database Configuration: Create a MySQL database for each microservice that are using: sd_user, sd_device, sd_consumer and sd_message.
+    
+    RabbitMQ Configuration: Docker installed is a requirement on this step. After this you can simply run:
+        docker pull rabbitmq:3.10.5-management
+        docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3.10.5-management
 
 Running with Docker
 
     Prerequisites: Docker and Docker Compose should be installed on your system.
-    Docker Compose: Use the provided docker-compose.yml file to run the entire application stack with a single command: docker-compose up.
+
+    Docker Build: You can build the image for each microservice and run from Docker app or you can continue to run with the following step.
+    command: docker build --no-cache -t device-microservice . 
+    where device-microservice is the name of the current microservice.
+    
+    Docker Compose: Use the provided docker-compose.yml file from each microservice using commands like this: 
+    command: docker-compose up -d --build    
+
+    Docker Run: 
+    Backend Microservices:  docker-compose up -d --build
+    Frontend: docker run -p 8080:3000 energy-management
+    
     Accessing the Application: Once the containers are up, access the application via http://localhost:3000 for the frontend and http://localhost:8080 for the backend services.
 
 Demo
