@@ -13,7 +13,7 @@ Pre-requirements
     Docker and Docker Compose: For containerization and orchestration, also RabbitMQ will run only on Docker.
     MySQL: For database services.
 
-Functionality
+Functionality(I stronly recommand to choose the Docker option)
 Locally Running the Application
 
     Backend Setup: Navigate to the backend folder, and run mvn spring-boot:run to start the Spring Boot application. 
