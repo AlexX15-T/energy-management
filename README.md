@@ -49,3 +49,9 @@ Running with Docker
 Demo
 
 Watch a comprehensive video demonstration of the Energy Management System Chat and Authorization Services in action here. This video covers the project's main features, showcasing real-time user interaction, notification handling, and secure access mechanisms.
+
+
+
+https://github.com/AlexX15-T/energy-management/assets/79551420/5120b553-8547-4536-a04c-9ad9eec32b2a
+
+
