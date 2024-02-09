@@ -2,7 +2,7 @@
 
 Project Name: Energy Management System Chat and Authorization Services
 
-About
+About: 
 This project integrates chat and authorization microservices for an Energy Management System, focusing on secure, real-time communication and efficient notification handling. Built with Java Spring Boot and secured with JWTs, it features a React frontend, Docker for deployment, MySQL for data persistence, RabbitMQ for notifications, and WebSockets for real-time communication.
 
 Pre-requirements
