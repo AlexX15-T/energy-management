@@ -16,7 +16,8 @@ Pre-requirements
 Functionality(I stronly recommand to choose the Docker option)
 Locally Running the Application
 
-    Backend Setup: Navigate to the backend folder, and run mvn clean install to generate target and after that run mvn spring-boot:run to start the Spring Boot application. 
+    Backend Setup: Navigate to the backend folder, and run mvn clean install to generate target 
+    and after that run mvn spring-boot:run to start the Spring Boot application. 
     Do not forget to take care when choosing ports for each microservice in the backend.
     
     Frontend Setup: In the frontend directory, execute npm install followed by npm start to launch the React application.
@@ -31,7 +32,8 @@ Locally Running the Application
 
 Running with Docker
 
-    Prerequisites: Docker should be installed on your system. Use command mvn clean install in each backend microservice to have up-to-date targets.
+    Prerequisites: Docker should be installed on your system. 
+    Use command mvn clean install in each backend microservice to have up-to-date targets.
 
     Docker Build: You can build the image for each microservice and run from Docker app or you can continue to run with the following step.
     command: docker build --no-cache -t device-microservice . 
@@ -44,7 +46,8 @@ Running with Docker
     Backend Microservices:  docker-compose up -d --build
     Frontend: docker run -p 8080:3000 energy-management
     
-    Accessing the Application: Once the containers are up, access the application via http://localhost:3000 for the frontend and http://localhost:80xx for the backend services from postman or other application made for testing endpoints.
+    Accessing the Application: Once the containers are up, access the application via http://localhost:3000 for the frontend 
+    and http://localhost:80xx for the backend services from postman or other application made for testing endpoints.
 
 Diagrams:
 Deployment:
