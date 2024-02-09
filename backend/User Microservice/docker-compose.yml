@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  user-microservice:
+    hostname: user-microservice
+    container_name: user-microservice
+    build: .
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/sd_user
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=qwer1234
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0.33
+    environment:
+      - MYSQL_ROOT_PASSWORD=qwer1234
+      - MYSQL_DATABASE=sd_user
+    ports:
+      - "3307:3306"
