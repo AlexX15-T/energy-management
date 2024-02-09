@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+  consumer-microservice:
+    hostname: consumer-microservice
+    container_name: consumer-microservice
+    build: .
+    ports:
+      - "8083:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/sd_device
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=qwer1234
+      - SPRING_RABBITMQ_HOST=rabbitmq  # Specify the host for RabbitMQ
+      - SPRING_RABBITMQ_PORT=5672      # Specify the port for RabbitMQ
+    depends_on:
+      - db
+      - rabbitmq  # Make sure consumer-microservice starts after RabbitMQ
+
+  db:
+    image: mysql:8.0.33
+    environment:
+      - MYSQL_ROOT_PASSWORD=qwer1234
+      - MYSQL_DATABASE=sd_device
+    ports:
+      - "3308:3306"
+
+  rabbitmq:
+    image: rabbitmq:3.10.5-management
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"

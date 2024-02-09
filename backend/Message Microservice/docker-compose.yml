@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  message-microservice:
+    hostname: message-microservice
+    container_name: message-microservice
+    build: .
+    ports:
+      - "8091:8091"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/sd_message
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=qwer1234
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0.33
+    environment:
+      - MYSQL_ROOT_PASSWORD=qwer1234
+      - MYSQL_DATABASE=sd_message
+    ports:
+      - "3310:3306"
