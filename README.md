@@ -27,6 +27,8 @@ Locally Running the Application
         docker pull rabbitmq:3.10.5-management
         docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3.10.5-management
 
+    Accessing the Application: Once the servers are up, access the application via http://localhost:3000.
+
 Running with Docker
 
     Prerequisites: Docker and Docker Compose should be installed on your system.
@@ -42,7 +44,7 @@ Running with Docker
     Backend Microservices:  docker-compose up -d --build
     Frontend: docker run -p 8080:3000 energy-management
     
-    Accessing the Application: Once the containers are up, access the application via http://localhost:3000 for the frontend and http://localhost:8080 for the backend services.
+    Accessing the Application: Once the containers are up, access the application via http://localhost:3000 for the frontend and http://localhost:80xx for the backend services from postman or other application made for testing endpoints.
 
 Demo
 
